@@ -1,0 +1,313 @@
+/*html {
+    background-color: #f3f4f6;
+}
+
+:root {
+    --main-color: maroon;
+}
+
+.parent {
+    background-color: blanchedalmond;
+}
+
+.countainer {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+@media (min-width:768px) {
+    .countainer {
+        width: 750px;
+    }
+}
+
+@media (min-width:992px) {
+    .countainer {
+        width: 970px;
+    }
+}
+
+@media (min-width:1200px) {
+    .countainer {
+        width: 1170px;
+    }
+}
+
+header .countainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .countainer .logo {
+    width: 40px;
+}
+
+header nav {
+    position: relative;
+
+}
+
+header nav:hover .icon span:nth-child(2) {
+    width: 100%;
+}
+
+header nav .icon {
+    width: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+header nav .icon span {
+    background-color: #222;
+    margin-bottom: 5px;
+    height: 3px;
+}
+
+header nav .icon span:first-child {
+    width: 100%;
+}
+
+header nav .icon span:nth-child(2) {
+    transition: 0.3s;
+    width: 60%;
+}
+
+header nav .icon span:last-child {
+
+    width: 100%;
+}
+
+header nav ul {
+    display: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: maroon;
+    position: absolute;
+    right: 0px;
+    min-width: 200px;
+    z-index: 1;
+    top: calc(100% + 5px);
+
+}
+
+header nav:hover ul {
+    display: block;
+}
+
+header nav ul::before {
+    content: "";
+    border-width: 10px;
+    border-color: transparent transparent black transparent;
+    border-style: solid;
+    right: 5px;
+    top: -19px;
+    position: inherit;
+}
+
+header nav ul li a {
+    display: block;
+    font-size: 16px;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    padding-left: 25px;
+}
+
+header nav ul li:not(:last-child) {
+    border-bottom: 1px #222 solid;
+}
+
+main {
+    background-image: url(../images/Gemini_Generated_Image_7o3b3n7o3b3n7o3b.png);
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh - 24px);
+    position: relative;
+}
+
+main .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 100%;
+    width: 320px;
+}
+
+main .intro-text h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--main-color);
+
+}
+
+main .intro-text p {
+    font-size: 19px;
+    line-height: 1.8;
+}*/
+/* --- 1. Variables & Global Styles --- */
+:root {
+    --bg-beige: #FAF3E0;
+    /* خلفية بيج هادئة */
+    --main-black: #1A1A1A;
+    /* أسود فخم للنصوص والقوائم */
+    --accent-red: #B91C1C;
+    /* أحمر داكن للتمييز والـ Hover */
+    --table-header: #E6D5B8;
+    /* درجة بيج داكنة لرأس الجدول */
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    /* تنعيم كل الحركات في الموقع */
+}
+
+body {
+    background-color: var(--bg-beige);
+    color: var(--main-black);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- 2. Header & Navigation --- */
+header {
+    background-color: var(--main-black);
+    color: var(--bg-beige);
+    padding: 1.5rem 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav a {
+    color: var(--bg-beige);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+
+/* Hover Effect & Active Page */
+nav a:hover {
+    color: var(--accent-red);
+    border-bottom: 2px solid var(--accent-red);
+}
+
+/* --- 3. Main Content & Tables --- */
+main {
+    padding: 50px 0;
+    min-height: 75vh;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    /* يجعل الجدول متجاوباً للموبايل */
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(128, 0, 0, 0.05);
+
+}
+
+th {
+    background-color: var(--table-header);
+    color: var(--main-black);
+    padding: 18px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 3px solid var(--main-black);
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Row Hover Effect */
+tr:hover {
+    background-color: #FFFDF5;
+    transform: scale(1.002);
+}
+
+/* --- 4. Footer --- */
+footer {
+    background-color: var(--main-black);
+    color: #999;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+}
+
+/* --- 5. Responsiveness (Mobile Friendly) --- */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 0px;
+    margin-top: 10px;
+}
+
+footer .links p {
+    color: rgba(172, 162, 162, 0.738);
+    margin-top: 0px;
+    padding-top: 0px;
+
+}
+
+footer ul a {
+    color: rgba(166, 140, 140, 0.738);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+footer a:hover {
+    color: lightsalmon;
+}
